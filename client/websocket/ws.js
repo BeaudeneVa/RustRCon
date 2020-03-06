@@ -34,7 +34,7 @@ module.exports = class WebSocket {
 		this.client.emit('disconnect', e);
 
 		if (this.reconnectTimeout) {
-			setTimeout(() => connect(), this.reconnectTimeout);
+			setTimeout(() => this.connect(), this.reconnectTimeout);
 		}
 	}
 
